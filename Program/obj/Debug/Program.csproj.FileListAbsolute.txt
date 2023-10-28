@@ -1,0 +1,6 @@
+/Users/rostik/Documents/Programming/C#/laba_3/Task_8/Program/Program/bin/Debug/Program.exe
+/Users/rostik/Documents/Programming/C#/laba_3/Task_8/Program/Program/bin/Debug/Program.pdb
+/Users/rostik/Documents/Programming/C#/laba_3/Task_8/Program/Program/obj/Debug/Program.csproj.AssemblyReference.cache
+/Users/rostik/Documents/Programming/C#/laba_3/Task_8/Program/Program/obj/Debug/Program.csproj.CoreCompileInputs.cache
+/Users/rostik/Documents/Programming/C#/laba_3/Task_8/Program/Program/obj/Debug/Program.exe
+/Users/rostik/Documents/Programming/C#/laba_3/Task_8/Program/Program/obj/Debug/Program.pdb
