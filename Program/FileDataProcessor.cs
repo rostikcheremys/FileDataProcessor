@@ -20,26 +20,28 @@ namespace Program
             string overflow = "";
 
             int sum = 0;
-            int count = 0;
-
+            double count = 0;
+    
             foreach (string fileName in fileNames)
             {
                 try
                 {
                     string[] readLine = File.ReadAllLines(fileName);
                     
-                    int numberOfFirst = Convert.ToInt32(readLine[0]);
-                    int numberOfSecond = Convert.ToInt32(readLine[1]);
+                    int number1 = Convert.ToInt32(readLine[0]);
+                    int number2 = Convert.ToInt32(readLine[1]);
 
                     try
                     {
+                        int multiplication;
+                        
                         checked
                         {
-                            int multiplication = numberOfFirst * numberOfSecond;
-                            
-                            sum += multiplication;
-                            count++;
+                            multiplication = number1 * number2;
                         }
+                        
+                        sum += multiplication;
+                        count++;
                     }
                     catch (OverflowException)
                     {
@@ -56,7 +58,7 @@ namespace Program
                 }
             }
 
-            double average = (double)sum / count;
+            double average = Convert.ToDouble(sum / count);
             
             Console.WriteLine($"Сума добутків: {sum}");
             Console.WriteLine($"Середнє арифметичне: {average}");
