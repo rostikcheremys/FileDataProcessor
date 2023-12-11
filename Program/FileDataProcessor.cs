@@ -28,19 +28,19 @@ namespace Program
                 try
                 {
                     string[] readLine = File.ReadAllLines(fileName);
-                    
+
                     int number1 = Convert.ToInt32(readLine[0]);
                     int number2 = Convert.ToInt32(readLine[1]);
 
                     try
-                    { 
+                    {
                         int multiplication;
-                        
+
                         checked
                         {
                             multiplication = number1 * number2;
                         }
-                        
+
                         sum += multiplication;
                         count++;
                     }
@@ -49,15 +49,11 @@ namespace Program
                         overflow += $"{fileName}\n";
                     }
                 }
-                catch (OverflowException)
-                {
-                    badData += $"{fileName}\n";
-                }
                 catch (FileNotFoundException)
                 {
                     noFile += $"{fileName}\n";
                 }
-                catch (Exception)
+                catch (Exception e) when (e is OverflowException || e is FormatException)
                 {
                     badData += $"{fileName}\n";
                 }
