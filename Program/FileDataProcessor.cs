@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Runtime.InteropServices;
 
 namespace Program
 {
@@ -19,7 +20,7 @@ namespace Program
             string badData = "";
             string overflow = "";
 
-            int sum = 0;
+            long sum = 0; 
             double count = 0;
     
             foreach (string fileName in fileNames)
@@ -32,7 +33,7 @@ namespace Program
                     int number2 = Convert.ToInt32(readLine[1]);
 
                     try
-                    {
+                    { 
                         int multiplication;
                         
                         checked
@@ -61,12 +62,13 @@ namespace Program
                     badData += $"{fileName}\n";
                 }
             }
-
+            
             double average = Convert.ToDouble(sum / count);
             
             Console.WriteLine($"Сума добутків: {sum}");
             Console.WriteLine($"Середнє арифметичне: {average}");
-
+            Console.WriteLine(count);
+            
             WriteToFile("no_file.txt", noFile);
             WriteToFile("bad_data.txt", badData);
             WriteToFile("overflow.txt", overflow);
